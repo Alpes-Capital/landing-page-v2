@@ -27,12 +27,12 @@ export const CustomLinkStyle = styled('div')`
    height: fit-content;
    background-color: var(--palette-background);
    &&[data-has-sublinks='true'] {
-      padding-top: 0.42rem;
-      padding-bottom: 0.42rem;
-   }
-   &&[data-has-sublinks='false'] {
       padding-top: 0rem;
       padding-bottom: 0rem;
+   }
+   &&[data-has-sublinks='false'] {
+      padding-top: 0.42rem;
+      padding-bottom: 0.42rem;
    }
    border-radius: 0.35rem;
    #clickable-text {
