@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import { styled } from 'goober'
 
-export const MainReportTitle = styled.div`
+export const MainReportTitle = styled('div')`
    max-width: 100%;
    width: 900px;
    background-color: var(--palette-bgContrast);

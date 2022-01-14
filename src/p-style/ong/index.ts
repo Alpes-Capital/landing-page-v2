@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import { styled } from 'goober'
 
-export const MainSubContainer = styled.sub`
+export const MainSubContainer = styled('sub')`
    width: 50%;
    .ngoPageVidIframeDiv {
       border-radius: 0.6rem;

@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import { styled } from 'goober'
 import { Container as ContainerGlobal } from '@p-styles/global'
 
-export const IframeContainer = styled.div`
+export const IframeContainer = styled('div')`
    width: 500px;
    height: 300px;
    border: 1px solid var(--palette-opaque-accent3);

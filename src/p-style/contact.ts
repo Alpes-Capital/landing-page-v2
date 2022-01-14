@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import { styled } from 'goober'
 
-export const ContactForm = styled.form`
+export const ContactForm = styled('form')`
    max-width: 90%;
    width: max-content;
    display: flex;

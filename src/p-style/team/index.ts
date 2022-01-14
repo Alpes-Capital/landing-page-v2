@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { a } from '@react-spring/web'
 
-export const Graph = styled.sub`
+export const Graph = styled('sub')`
    display: inline-flex;
    justify-content: space-between !important;
    align-items: stretch;
