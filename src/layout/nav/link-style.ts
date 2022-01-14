@@ -1,8 +1,8 @@
 import { a } from '@react-spring/web'
-import styled from 'styled-components'
+import { styled } from 'goober'
 
 //* Link big container
-export const LinkContainer = styled.div`
+export const LinkContainer = styled('div')`
    width: min-content;
    height: min-content;
    display: flex;
@@ -18,7 +18,7 @@ export const LinkContainer = styled.div`
 type LinkProps = {
    isActive?: boolean
 }
-
+//TODO Change to non prop styled-component
 export const LinkText = styled.a<LinkProps>`
    position: relative;
    width: fit-content;
@@ -87,7 +87,7 @@ export const SubLinksContainer = styled(a.div)`
    right: 0;
 `
 
-export const SubLinkItem = styled.a`
+export const SubLinkItem = styled('a')`
    display: block;
    border-radius: 0.3rem;
    background: transparent;

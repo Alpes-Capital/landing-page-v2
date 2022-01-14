@@ -1,14 +1,14 @@
 import { memo } from "react"
 import styled from "styled-components"
 
-export const PDFIframe = styled.iframe`
+export const PDFIframe = styled('iframe')`
    max-width: 100%;
    width: 900px;
    min-height: 100vh;
    border-radius: 0.6rem;
 `
 
-export const ErrorLoading = styled.div`
+export const ErrorLoading = styled('div')`
    max-width: 100%;
    padding: 1rem;
    display: flex;

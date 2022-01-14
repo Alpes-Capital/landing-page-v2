@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { a } from '@react-spring/web'
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled('header')`
    display: inline-flex;
    justify-content: space-between;
    align-items: center;
@@ -36,6 +36,7 @@ type HeaderContentCssProps = {
    customMask?: string
 }
 
+//TODO change to non prop styled-component
 export const HeaderContent = styled.div<HeaderContentCssProps>`
    left: 0;
    width: 55vw;

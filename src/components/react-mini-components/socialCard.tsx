@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styled from 'styled-components'
+import { styled } from 'goober'
 
 interface IconTypeSvgProps {
    iconType: 'svg'
@@ -17,7 +17,7 @@ type ComponentProps = (IconTypeSvgProps | IconTypeImgProps) & {
    url: string,
 }
 
-export const Container = styled.a`
+export const Container = styled('a')`
    width: fit-content;
    min-width: 4rem;
    height: 1.8rem;

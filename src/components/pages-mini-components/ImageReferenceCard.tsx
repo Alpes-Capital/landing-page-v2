@@ -2,10 +2,10 @@ import type { CSSProperties } from 'styled-components'
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import styled from 'styled-components'
+import { styled } from 'goober'
 import { a, useSpring, config } from '@react-spring/web'
 
-const ImageReferenceCardStyle = styled.a`
+const ImageReferenceCardStyle = styled('a')`
    display: flex;
    flex-direction: column;
    align-items: flex-start;

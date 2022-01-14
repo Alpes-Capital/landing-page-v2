@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import { styled } from 'goober'
 
 
-const SimpleCardStyle = styled.div`
+const SimpleCardStyle = styled('div')`
    display: flex;
    flex-direction: column;
    align-items: flex-start;

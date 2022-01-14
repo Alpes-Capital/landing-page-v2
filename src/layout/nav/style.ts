@@ -6,6 +6,7 @@ type NavProps = {
    miniMenuState: boolean,
 }
 
+//TODO change to non prop styled-component
 export const NavContainer = styled.nav<NavProps>`
    position: fixed;
    top: 0;
@@ -81,7 +82,7 @@ export const NavContainer = styled.nav<NavProps>`
    }
 `
 
-export const NavSubSection = styled.section`
+export const NavSubSection = styled('section')`
    display: inline-flex;
    justify-content: center;
    align-items: center;
@@ -90,7 +91,7 @@ export const NavSubSection = styled.section`
 
 //*Nav buttons style: mini menu button and theme change
 
-export const NavColorThemeButton = styled.button`
+export const NavColorThemeButton = styled('button')`
    width: 2.1rem;
    height: 2.1rem;
    margin-left: 0.2rem;

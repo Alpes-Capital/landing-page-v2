@@ -21,7 +21,7 @@ export const Container = styled(ContainerGlobal)`
 `
 
 /*
-export const AlpesStory = styled.div`
+export const AlpesStory = styled('div')`
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -42,7 +42,7 @@ export const AlpesStory = styled.div`
    }
 `
 
-export const StorySection = styled.section`
+export const StorySection = styled('section')`
    display: inline-flex;
    flex-wrap: nowrap;
    width: 100%;

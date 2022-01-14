@@ -1,5 +1,5 @@
 import type { State } from '@hookstate/core'
-import styled from 'styled-components'
+import { styled } from 'goober'
 import { createState, useState } from '@hookstate/core'
 import { a, useSpring, config } from 'react-spring'
 

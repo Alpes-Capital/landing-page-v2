@@ -23,6 +23,7 @@ type CustomLinkProps = {
    hasSubLink?: boolean
 }
 
+//TODO change to non prop styled-component
 export const CustomLinkStyle = styled.div<CustomLinkProps>`
    display: inline-flex;
    align-items: stretch;
@@ -48,7 +49,7 @@ export const CustomLinkStyle = styled.div<CustomLinkProps>`
    }
 `
 
-export const SubLinkToggle = styled.button`
+export const SubLinkToggle = styled('button')`
    display: inline-flex;
    align-items: center;
    padding: 0.4rem;
@@ -69,12 +70,14 @@ export const SubLinkToggle = styled.button`
    cursor: zoom-in;
 `
 
+//TODO update to non prop styled-components
 //* All about subLinks 
 
 type SubLinksContainerProps = {
    isOpen?: boolean
 }
 
+//TODO change to non prop styled-component
 export const SubLinkContainer = styled.div<SubLinksContainerProps>`
    align-items: flex-start;
    justify-content: flex-start;
@@ -84,6 +87,7 @@ export const SubLinkContainer = styled.div<SubLinksContainerProps>`
    overflow: hidden;
 `
 
+//TODO change to non prop styled-components
 export const SubLinkStyle = styled.a.attrs({
    marginSides: '1rem',
    marginTopBottom: '.4rem',

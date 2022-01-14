@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import styled from 'styled-components'
+import { styled } from 'goober'
 
 import SimpleContentCard from '@p-components/SimpleContentCard'
 
-const WideContentCardStyle = styled.div`
+const WideContentCardStyle = styled('div')`
    display: inline-flex;
    justify-content: flex-end;
    align-items: stretch;

@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import ReferenceLink from "@components/react-mini-components/ReferenceLink"
 
-const Container = styled.div`
+const Container = styled('div')`
    flex-direction: column;
    align-items: stretch;
    justify-content: center;
@@ -79,7 +79,7 @@ const Container = styled.div`
    }
 `
 
-const MobileMiniVersion = styled.button`
+const MobileMiniVersion = styled('button')`
    position: fixed;
    bottom: 0.9rem;
    margin-left: 5vw;

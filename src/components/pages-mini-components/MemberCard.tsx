@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import { styled } from 'goober'
 import Image from 'next/image'
 
 //* Default member image
 import DefaultMemberImg from '@public/images/global/Logo_mini_bg.png'
 
 //* Defining component styles
-export const MemberCardContainer = styled.div`
+export const MemberCardContainer = styled('div')`
    width: 450px;
    max-height: 290px;
    max-width: 100%;

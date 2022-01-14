@@ -1,12 +1,12 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import styled from 'styled-components'
+import { styled } from 'goober'
 import { a, useSpring, config } from 'react-spring'
 
 import OutsideSourceIcon from '@icons/externalLinksIcons8.svg'
 
-export const Container = styled.div`
+export const Container = styled('div')`
    width: fit-content;
    height: fit-content;
    display: flex;
