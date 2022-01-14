@@ -1,5 +1,5 @@
-import { ThemeTyping, createGlobalStyle } from 'styled-components'
-import { cssVarsRootProps } from '@components/css-theme'
+import { createGlobalStyles } from 'goober/global'
+import { ThemeTyping } from 'goober'
 
 const userAdvise = {
    success: '#00c853',
@@ -88,10 +88,7 @@ export const Theme2: ThemeTyping = {
    fonts: {...fonts}
 }
 
-export const GlobalStyle = createGlobalStyle<cssVarsRootProps>`
-   :root {
-      ${props => props.cssTheme}
-   }
+export const GlobalStyle = createGlobalStyles`
    *{
       margin: 0px;
       padding: 0px;

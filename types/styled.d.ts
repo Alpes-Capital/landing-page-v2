@@ -1,5 +1,5 @@
 
-import 'styled-components';
+import 'goober';
 
 interface pallete {
    background: string
@@ -12,7 +12,7 @@ interface pallete {
    textInverse: string
 }
 
-declare module 'styled-components' {
+declare module 'goober' {
    export interface DefaultTheme {
       palette: pallete & {
          opaque: pallete

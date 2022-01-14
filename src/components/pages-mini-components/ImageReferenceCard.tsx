@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'styled-components'
+import type { CSSAttribute } from 'goober'
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -74,7 +74,7 @@ type Props = {
    backgroundSrc: string | StaticImageData
    alt?: string,
    props?: React.HtmlHTMLAttributes<HTMLAnchorElement>
-   style?: CSSProperties 
+   style?: CSSAttribute 
 }
 
 const ImageReferenceCard: React.FC<Props> = ({
