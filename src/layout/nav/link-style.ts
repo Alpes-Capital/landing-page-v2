@@ -40,30 +40,27 @@ export const LinkText = styled('a')`
    cursor: pointer;
    span {
       display: relative;
-      z-index: calc(var(--zIndex-navDropdown));
+      z-index: calc(var(--zIndex-navDropdown) + 2);
    }
-   :hover {
-      :before {
-         opacity: 0.7;
-      }
-   }
-   ::before {
+   &&::before {
       content: '';
       position: absolute;
-      width: calc(100% - 0.23rem);
-      height: calc(100% - 0.47rem);
+      width: calc(100% - 0.25rem);
+      height: calc(100% - 0.4rem);
       border-radius: 0.25rem;
       background-color: var(--palette-bgContrast);
       transition: opacity 0.2s linear;
+      opacity: 0;
+      z-index: calc(var(--zIndex-navDropdown) + 1);
    }
    &&[data-is-active='true'] {
-      ::before {
-         opacity: 0.7;
+      &&::before {
+         opacity: 0.7 !important;
       }
    }
-   &&[data-is-active='false'] {
-      ::before {
-         opacity: 0;
+   &&:hover {
+      &&::before {
+         opacity: 0.7 !important;
       }
    }
    @media (max-width: 1200px) {
