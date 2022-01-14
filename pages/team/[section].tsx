@@ -18,7 +18,6 @@ type Member = {
    institution: string
 }
 
-//TODO Later, add an actual DB or CMS data fetch
 export const getStaticPaths: GetStaticPaths = async () => {
    const sections = await getTeamSections()
 

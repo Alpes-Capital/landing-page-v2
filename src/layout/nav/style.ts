@@ -1,13 +1,6 @@
-import styled from "styled-components"
-import { LinkContainer, LinkText } from './link-style'
+import { styled } from 'goober'
 
-type NavProps = {
-   scrolled: boolean,
-   miniMenuState: boolean,
-}
-
-//TODO change to non prop styled-component
-export const NavContainer = styled.nav<NavProps>`
+export const NavContainer = styled('nav')`
    position: fixed;
    top: 0;
    width: 100vw;
@@ -40,15 +33,33 @@ export const NavContainer = styled.nav<NavProps>`
       ::before{
          display: block;
          content: "";
-         width: ${props => props.scrolled ? "100vw" : "0"};
-         height: ${props => props.scrolled ? "6rem" : "0"};
-         margin-left: ${props => props.scrolled ? "0" : "100vw"};
-         border-bottom-left-radius: ${props => props.scrolled ? "0" : "100%"};
          background: transparent;
          backdrop-filter: var(--mods-blur);
          transition: 0.4s, backdrop-filter 0s;
       }
    }
+
+   &&[data-scrolled='true'] {
+      #background {
+         ::before{
+            width: 100vw;
+            height: 6rem;
+            margin-left: 0;
+            border-bottom-left-radius: 0;
+         }
+      }
+   }
+   &&[data-scrolled='false'] {
+      #background {
+         ::before{
+            width: 0;
+            height: 0;
+            margin-left: 100vw;
+            border-bottom-left-radius: 100%;
+         }
+      }
+   }
+
    @media (min-width: 1200px) {
       #logo{ display: block; }
       #logo-mini{ display: none; }
@@ -56,23 +67,23 @@ export const NavContainer = styled.nav<NavProps>`
    @media (max-width: 1200px) {
       #logo{ display: none; }
       #logo-mini{ display: block; }
-      ${LinkContainer} {
-         margin: 0.01rem;
-      }
-      ${LinkText} {
-         font-size: 1rem;
-      }
    }
    @media (max-width: 760px) {
       #logo{ display: none; }
       #logo-mini{ display: block; }
-      #background {
-         ::before {
-            backdrop-filter: ${props => props.miniMenuState ? "blur(0px)" : 'var(--mods-blur)'};
+      &&[data-mini-menu='true'] {
+         #background {
+            ::before {
+               backdrop-filter: blur(0px);
+            }
          }
       }
-      ${LinkContainer} {
-         display: none !important;
+      &&[data-mini-menu='false'] {
+         #background {
+            ::before {
+               backdrop-filter: var(--mods-blur);
+            }
+         }
       }
    }
    @media (min-width: 3300px) {

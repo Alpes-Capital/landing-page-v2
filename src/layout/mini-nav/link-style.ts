@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import { styled } from 'goober'
 import { a } from '@react-spring/web'
 
 //* Main links style
@@ -19,20 +19,21 @@ export const CustomLinkContainer = styled(a.div)`
    max-width: 760px;
 `
 
-type CustomLinkProps = {
-   hasSubLink?: boolean
-}
-
-//TODO change to non prop styled-component
-export const CustomLinkStyle = styled.div<CustomLinkProps>`
+export const CustomLinkStyle = styled('div')`
    display: inline-flex;
    align-items: stretch;
    justify-content: flex-start;
    width: 100%;
    height: fit-content;
    background-color: var(--palette-background);
-   padding-top: ${props => !props.hasSubLink ? '0.42rem' : '0rem'};
-   padding-bottom: ${props => !props.hasSubLink ? '0.42rem' : '0rem'};
+   &&[data-has-sublinks='true'] {
+      padding-top: 0.42rem;
+      padding-bottom: 0.42rem;
+   }
+   &&[data-has-sublinks='false'] {
+      padding-top: 0rem;
+      padding-bottom: 0rem;
+   }
    border-radius: 0.35rem;
    #clickable-text {
       display: inline-flex;
@@ -70,38 +71,33 @@ export const SubLinkToggle = styled('button')`
    cursor: zoom-in;
 `
 
-//TODO update to non prop styled-components
 //* All about subLinks 
 
-type SubLinksContainerProps = {
-   isOpen?: boolean
-}
-
-//TODO change to non prop styled-component
-export const SubLinkContainer = styled.div<SubLinksContainerProps>`
+export const SubLinkContainer = styled('div')`
    align-items: flex-start;
    justify-content: flex-start;
    flex-direction: column;
    width: 100%;
-   height: ${props => props.isOpen ? 'fit-content' : '0px'};
+   &&[data-is-open='true'] {
+      height: fit-content;
+   }
+   &&[data-is-open='false'] {
+      height: 0px;
+   }
    overflow: hidden;
 `
 
-//TODO change to non prop styled-components
-export const SubLinkStyle = styled.a.attrs({
-   marginSides: '1rem',
-   marginTopBottom: '.4rem',
-})`
+export const SubLinkStyle = styled('a')`
    display: inline-flex;
    position: relative;
    align-items: center;
    justify-content: flex-start;
-   width: ${props => `calc(100% - ${props.marginSides})`};
-   margin: ${props => props.marginTopBottom};
-   margin-left: ${props => props.marginSides};
+   width: calc(100% - 1rem);
+   margin: .4rem;
+   margin-left: 1rem;
    padding-top: 0.2rem;
    padding-bottom: 0.2rem;
-   margin-right: ${props => props.marginSides};
+   margin-right: 1rem;
    height: fit-content;
    background: transparent;
    color: var(--palette-textMain);

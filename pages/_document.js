@@ -21,11 +21,11 @@ class MyDocument extends Document {
 
       return {
         ...initialProps,
+        css,
         styles: (
           <>
             {initialProps.styles}
             {sheet.getStyleElement()}
-            {css && <style dangerouslySetInnerHTML={{ __html: css }} />}
           </>
         ),
       }
@@ -39,6 +39,7 @@ class MyDocument extends Document {
       <Html lang='pt'>
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;800&family=Montserrat:wght@100;200;300;400;500;600;800&display=swap" rel="stylesheet" />
+          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
         <body>
           <Main />

@@ -67,7 +67,7 @@ const LinkCustom: React.FC<LinkProps> = ({ href, name, subLinks }) => {
                role="link"
                onMouseOut={() => setIsOpen(false)}
                onMouseOver={() => setIsOpen(true)}
-               isActive={isOpen}>
+               data-is-active={isOpen ? 'true' : 'false'}>
                <span>{name}</span>
             </LinkText>)
             : (<LinkText><span>{name}</span></LinkText>) }

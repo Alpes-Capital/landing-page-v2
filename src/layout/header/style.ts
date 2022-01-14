@@ -32,12 +32,7 @@ export const HeaderContainer = styled('header')`
    }
 `
 
-type HeaderContentCssProps = {
-   customMask?: string
-}
-
-//TODO change to non prop styled-component
-export const HeaderContent = styled.div<HeaderContentCssProps>`
+export const HeaderContent = styled('div')`
    left: 0;
    width: 55vw;
    height: 100%;
@@ -49,8 +44,6 @@ export const HeaderContent = styled.div<HeaderContentCssProps>`
    padding-left: 10vw;
    padding-right: 10vw;
    color: #fff;
-   background: ${props => props.customMask ? props.customMask : 
-   "linear-gradient(145deg, rgba(30,29,69,0.870886025308561) 8%, rgba(141,160,226,0.45071795808167014) 50%, rgba(58,84,180,0.2294294426755077) 77%)"};
    backdrop-filter: var(--mods-blur);
    h2{
       font-size: 3rem;

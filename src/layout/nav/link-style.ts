@@ -11,15 +11,16 @@ export const LinkContainer = styled('div')`
    overflow: visible;
    position: relative;
    margin: 0.3rem;
+   @media (max-width: 1200px) {
+      margin: 0.01rem;
+   }
+   @media (max-width: 760px) {
+      display: none !important;
+   }
 `
 
 //* Main link component style
-
-type LinkProps = {
-   isActive?: boolean
-}
-//TODO Change to non prop styled-component
-export const LinkText = styled.a<LinkProps>`
+export const LinkText = styled('a')`
    position: relative;
    width: fit-content;
    padding: 0.5rem;
@@ -53,8 +54,20 @@ export const LinkText = styled.a<LinkProps>`
       height: calc(100% - 0.47rem);
       border-radius: 0.25rem;
       background-color: var(--palette-bgContrast);
-      opacity: ${props => props.isActive ? '0.7' : '0'};
       transition: opacity 0.2s linear;
+   }
+   &&[data-is-active='true'] {
+      ::before {
+         opacity: 0.7;
+      }
+   }
+   &&[data-is-active='false'] {
+      ::before {
+         opacity: 0;
+      }
+   }
+   @media (max-width: 1200px) {
+      font-size: 1rem;
    }
 `
 

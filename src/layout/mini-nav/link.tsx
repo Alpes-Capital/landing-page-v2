@@ -30,7 +30,8 @@ const CustomLink: React.FC<Props> = ({ href, title, subLinks, openState, openMen
 
    return (
       <CustomLinkContainer style={{...styles}}>
-         <CustomLinkStyle hasSubLink={(subLinks && subLinks?.length >= 0)}>
+         <CustomLinkStyle 
+         data-has-sublinks={(subLinks && subLinks?.length >= 0) ? 'true' : 'false'}>
             <Link href={href} passHref>
                <a id="clickable-text" 
                role="link">
@@ -53,7 +54,7 @@ const CustomLink: React.FC<Props> = ({ href, title, subLinks, openState, openMen
             }
          </CustomLinkStyle>
          {subLinks && 
-            <SubLinkContainer isOpen={openState}>
+            <SubLinkContainer data-is-open={openState ? 'true' : 'false'}>
                {subLinks.map((subLink, index) => (
                   <Link href={href + subLink.href} passHref key={index}>
                      <SubLinkStyle key={index}
