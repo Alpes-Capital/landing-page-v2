@@ -1,7 +1,9 @@
-import {useEffect} from 'react'
+import {useEffect, createElement} from 'react'
 import getConfig from 'next/config'
 import Head from 'next/head'
 import { Globals } from 'react-spring'
+import { prefix } from 'goober-autoprefixer'
+import { setup } from 'goober'
 
 //@ts-expect-error
 import { useReduceMotion  } from 'react-reduce-motion'
@@ -21,6 +23,8 @@ import Footer from '@layout/footer'
 import CookiesPolicyCard from '@components/react-mini-components/CookiesPolicyCard'
 import Alert from '@components/react-mini-components/Alert'
 
+//* Setting up goober css
+setup(createElement, prefix)
 
 const WithThemeProvider: React.FC = () => {
    const [isDarkMode, isDarkModeToggle] = usePersistentState(false, 'theme')

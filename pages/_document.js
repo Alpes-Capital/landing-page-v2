@@ -1,5 +1,6 @@
 import AsyncNextScripts from '@components/AsyncNextScripts'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { extractCss } from 'goober'
 
 import { ServerStyleSheet } from 'styled-components'
 
@@ -16,12 +17,15 @@ class MyDocument extends Document {
         })
 
       const initialProps = await Document.getInitialProps(ctx)
+      const css = extractCss()
+
       return {
         ...initialProps,
         styles: (
           <>
             {initialProps.styles}
             {sheet.getStyleElement()}
+            {css && <style dangerouslySetInnerHTML={{ __html: css }} />}
           </>
         ),
       }

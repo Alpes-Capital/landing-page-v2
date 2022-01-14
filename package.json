@@ -16,6 +16,8 @@
     "@hookstate/core": "^3.0.13",
     "@react-spring/web": "^9.3.0",
     "axios": "^0.24.0",
+    "goober": "^2.1.7",
+    "goober-autoprefixer": "^1.2.1",
     "lottie-react": "^2.1.0",
     "next": "^12.0.8-canary.19",
     "next-compose-plugins": "^2.2.1",
