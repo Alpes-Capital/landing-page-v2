@@ -33,7 +33,7 @@ const WithThemeProvider: React.FC = () => {
       <>
          <CssThemeProvider 
             theme={isDarkMode ? Theme2 : Theme1} 
-            defaultTheme={Theme1} CustomGlobalStyle={GlobalStyle} />
+            defaultTheme={Theme1}/>
          <Navigation routes={publicRuntimeConfig.routes as PropsCombined} 
          isDarkTheme={isDarkMode} toggleDarkTheme={isDarkModeToggle} />
       </>
@@ -59,6 +59,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
          </Head>
+         <GlobalStyle />
          <DefaultSEOComp />
          <WithThemeProvider />
          <CookiesPolicyCard />

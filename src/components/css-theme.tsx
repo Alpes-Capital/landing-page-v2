@@ -9,18 +9,11 @@ type ThemeType = Object
 type ThemeProviderProps = {
    theme: ThemeType
    defaultTheme: ThemeType,
-   CustomGlobalStyle?: GlobalStyleComponent<cssVarsRootProps, DefaultTheme>
 }
 
 export type cssVarsRootProps = {
    cssTheme: string[]
 }
-
-const CssRootTheme = createGlobalStyle<cssVarsRootProps>`
-   :root {
-      ${props => props.cssTheme}
-   }
-`
 
 const globalState = createState<Object>({})
 const wrapState = (s: State<Object>) => ({
@@ -54,7 +47,7 @@ export const useCssTheme = () => wrapState(useStateGlobal(globalState))
 * Receives an object or an array of objects and creates a provider with the inserted theme
 * as CSS values
 */
-const CssThemeProvider: React.FC<ThemeProviderProps> = ({ theme, defaultTheme, CustomGlobalStyle }) => {
+const CssThemeProvider: React.FC<ThemeProviderProps> = ({ theme, defaultTheme }) => {
    
    //* Function to update global theme state values
    const setCssTheme = useCssTheme().set
@@ -70,11 +63,12 @@ const CssThemeProvider: React.FC<ThemeProviderProps> = ({ theme, defaultTheme, C
 
    //*Actual provider with themeContainer HTML id so values can be latter accessed inside javascript as a function
    //? you can include if you will a custom global style, that 
-   if(CustomGlobalStyle) return (
-      <CustomGlobalStyle cssTheme={cssTheme} />
-   )
    return (
-      <CssRootTheme cssTheme={cssTheme} />
+      <style jsx global>{`
+         :root {
+            ${cssTheme.map(t => t).join('\n')}
+         }
+    `}</style>
    )
 }
 
