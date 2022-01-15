@@ -28,7 +28,7 @@ export const FooterContainer = styled('footer')`
       font-size: 0.75rem;
       font-weight: 900;
       letter-spacing: 0.01rem;
-      ::before {
+      :&&:before {
          content: "";
          width: 100%;
          height: 0.1rem;

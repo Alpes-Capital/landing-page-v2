@@ -36,7 +36,7 @@ const Container = styled(a.div)`
          font-family: var(--fonts-secondary);
          font-weight: 500;
       }
-      :before{
+      &&:before{
          display: block;
          content: '';
          position: absolute;
@@ -50,7 +50,7 @@ const Container = styled(a.div)`
    &[data-alert-type='success']{
       sub{
          border: 2px solid var(--palette-userAdvise-success);
-         :before{
+         &&:before{
             background: linear-gradient(124deg, 
                var(--palette-userAdvise-success) 0%, 
                var(--palette-opaque-background) 100%);
@@ -60,7 +60,7 @@ const Container = styled(a.div)`
    &[data-alert-type='error']{
       sub{
          border: 2px solid var(--palette-userAdvise-error);
-         :before{
+         &&:before{
             background: linear-gradient(124deg, 
                var(--palette-userAdvise-error) 0%, 
                var(--palette-opaque-background) 100%);
@@ -70,7 +70,7 @@ const Container = styled(a.div)`
    &[data-alert-type='warning']{
       sub{
          border: 2px solid var(--palette-userAdvise-warning);
-         :before{
+         &&:before{
             background: linear-gradient(124deg, 
                var(--palette-userAdvise-warning) 0%, 
                var(--palette-opaque-background) 100%);
@@ -80,7 +80,7 @@ const Container = styled(a.div)`
    &[data-alert-type='info']{
       sub{
          border: 2px solid var(--palette-userAdvise-info);
-         :before{
+         &&:before{
             background: linear-gradient(124deg, 
                var(--palette-userAdvise-info) 0%, 
                var(--palette-opaque-background) 100%);

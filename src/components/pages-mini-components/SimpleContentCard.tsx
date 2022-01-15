@@ -35,7 +35,7 @@ const SimpleCardStyle = styled('div')`
          top: 10%;
          left: 10%;
       }
-      ::before {
+      :&&:before {
          position: absolute;
          content: '';
          width: 100%;

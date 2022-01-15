@@ -30,7 +30,7 @@ export const NavContainer = styled('nav')`
       width: 100%;
       height: 100%;
       overflow: hidden;
-      ::before{
+      :&&:before{
          display: block;
          content: "";
          background: transparent;
@@ -41,7 +41,7 @@ export const NavContainer = styled('nav')`
 
    &&[data-scrolled='true'] {
       #background {
-         ::before{
+         :&&:before{
             width: 100vw;
             height: 6rem;
             margin-left: 0;
@@ -51,7 +51,7 @@ export const NavContainer = styled('nav')`
    }
    &&[data-scrolled='false'] {
       #background {
-         ::before{
+         :&&:before{
             width: 0;
             height: 0;
             margin-left: 100vw;
@@ -73,14 +73,14 @@ export const NavContainer = styled('nav')`
       #logo-mini{ display: block; }
       &&[data-mini-menu='true'] {
          #background {
-            ::before {
+            :&&:before {
                backdrop-filter: blur(0px);
             }
          }
       }
       &&[data-mini-menu='false'] {
          #background {
-            ::before {
+            :&&:before {
                backdrop-filter: var(--mods-blur);
             }
          }

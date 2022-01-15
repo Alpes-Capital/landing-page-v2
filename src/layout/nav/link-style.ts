@@ -108,7 +108,7 @@ export const SubLinkItem = styled('a')`
    color: var(--palette-textMain);
    margin-top: 0.2rem;
    margin-bottom: 0.2rem;
-   :hover {
+   &&:hover {
       background: var(--palette-bgContrast);
       cursor: pointer;
    }

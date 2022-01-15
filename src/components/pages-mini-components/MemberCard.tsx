@@ -123,7 +123,7 @@ export const MemberCardContainer = styled('div')`
          border-radius: 50%;
          overflow: hidden;
       }
-      ::before {
+      :&&:before {
          content: '';
          position: absolute;
          width: 100%;

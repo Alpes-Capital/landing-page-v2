@@ -32,7 +32,7 @@ export const Container = styled('div')`
          height: 16px !important;  
          margin-right: 0.3rem;
       }
-      :hover{
+      &&:hover{
          background-color: var(--palette-background);
          cursor: pointer;
       }

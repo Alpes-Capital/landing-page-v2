@@ -15,7 +15,7 @@ const Container = styled('div')`
    border-radius: 0.6rem;
    overflow: hidden;
    color: var(--palette-textMain);
-   :before{
+   &&:before{
       content: "";
       width: 100%;
       height: 100%;
@@ -52,9 +52,6 @@ const Container = styled('div')`
       border-radius: 0.3rem;
       transition: background 0.3s ease-in-out;
       cursor: pointer;
-      :hover {
-         background: linear-gradient(120deg, var(--palette-accent2) 37%, var(--palette-opaque-accent2) 100%);
-      }
    }
    @media (min-width: 1920px),  (min-height: 1080px) {
       bottom: 3rem;
@@ -91,7 +88,7 @@ const MobileMiniVersion = styled('button')`
    overflow: hidden;
    display: none !important;
    cursor: pointer;
-   :before{
+   &&:before{
       content: "";
       width: 100%;
       height: 100%;

@@ -79,7 +79,7 @@ export const HeaderDisplayButton = styled(a.a)`
    backdrop-filter: var(--mods-blur);
    margin-top: 5rem;
    transition: background 0.3s ease-in-out;
-   :hover {
+   &&:hover {
       background: linear-gradient(120deg, var(--palette-accent2) 37%, var(--palette-opaque-accent2) 100%);
    }
 `
