@@ -17,7 +17,6 @@
     "@react-spring/web": "^9.3.0",
     "axios": "^0.24.0",
     "goober": "^2.1.7",
-    "goober-autoprefixer": "^1.2.1",
     "lottie-react": "^2.1.0",
     "next": "^12.0.8-canary.19",
     "next-compose-plugins": "^2.2.1",
@@ -32,7 +31,6 @@
     "react-ssr-prepass": "npm:preact-ssr-prepass",
     "scheduler": "^0.20.2",
     "sharp": "^0.29.3",
-    "styled-components": "^5.3.3",
     "zdog": "^1.1.2"
   },
   "devDependencies": {
@@ -54,8 +52,6 @@
     "stylelint": "^14.1.0",
     "stylelint-config-recommended": "^6.0.0",
     "stylelint-config-standard": "^24.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "4.4.4",
     "uuid": "^8.3.2"
   }
