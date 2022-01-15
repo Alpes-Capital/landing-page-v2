@@ -1,6 +1,6 @@
-import { useState, useEffect, memo } from "react"
+import { useState, useEffect } from "react"
 import usePersistentState from "@components/hooks/usePersistentState"
-import styled from "styled-components"
+import { styled } from "goober"
 
 import ReferenceLink from "@components/react-mini-components/ReferenceLink"
 

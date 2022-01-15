@@ -1,5 +1,5 @@
 import { memo } from "react"
-import styled from "styled-components"
+import { styled } from 'goober'
 
 export const PDFIframe = styled('iframe')`
    max-width: 100%;

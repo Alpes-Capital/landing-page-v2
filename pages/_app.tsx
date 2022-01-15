@@ -1,9 +1,10 @@
-import {useEffect, createElement} from 'react'
+import { useEffect } from 'react'
+import { h } from 'preact'
 import getConfig from 'next/config'
 import Head from 'next/head'
 import { Globals } from 'react-spring'
-import { prefix } from 'goober-autoprefixer'
 import { setup } from 'goober'
+import { prefix } from 'goober/prefixer'
 
 //@ts-expect-error
 import { useReduceMotion  } from 'react-reduce-motion'
@@ -24,7 +25,7 @@ import CookiesPolicyCard from '@components/react-mini-components/CookiesPolicyCa
 import Alert from '@components/react-mini-components/Alert'
 
 //* Setting up goober css
-setup(createElement, prefix)
+setup(h, prefix)
 
 const WithThemeProvider: React.FC = () => {
    const [isDarkMode, isDarkModeToggle] = usePersistentState(false, 'theme')

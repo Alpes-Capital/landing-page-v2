@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import { styled } from 'goober'
 import { a } from '@react-spring/web'
 
 export const HeaderContainer = styled('header')`

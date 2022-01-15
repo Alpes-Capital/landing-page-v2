@@ -1,5 +1,5 @@
 import { a } from "@react-spring/web"
-import styled from "styled-components"
+import { styled } from 'goober'
 
 type ContainerProps = {
    active: number,

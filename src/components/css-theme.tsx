@@ -2,8 +2,6 @@ import type { State } from '@hookstate/core'
 import { useState, useEffect } from "react"
 import { createState, useState as useStateGlobal } from '@hookstate/core'
 import { makeCssThemeVars } from '@components/utils'
-import { createGlobalStyle } from "styled-components"
-import type { GlobalStyleComponent, DefaultTheme } from "styled-components"
 
 type ThemeType = Object
 type ThemeProviderProps = {

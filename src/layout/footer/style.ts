@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import { styled } from 'goober'
 
 export const FooterContainer = styled('footer')`
    width: 100vw;
